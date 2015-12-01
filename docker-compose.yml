@@ -1,0 +1,19 @@
+bamboo:
+  image: savaki/bamboo-server:5.1.37
+  ports:
+    - "8085:8085"
+    - "54663:54663"
+  links:
+    - "mysql:mysql"
+  volumes:
+    - "/bamboo/bamboo-data:/bamboo-data"
+
+mysql:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+  volumes:
+    - "/bamboo/var/lib/mysql:/var/lib/mysql"
+
