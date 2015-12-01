@@ -36,7 +36,7 @@ RUN echo "bamboo.home = /bamboo-data" > /atlassian-bamboo/atlassian-bamboo/WEB-I
 
 VOLUME /bamboo-data
 
-ADD bamboo.cfg.xml /atlassian-bamboo/bamboo.cfg.xml
+ADD bamboo.cfg.xml /bamboo-data/bamboo.cfg.xml
 
 EXPOSE 8085
 EXPOSE 54663
